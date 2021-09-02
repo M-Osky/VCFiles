@@ -17,7 +17,8 @@ extracts the locus IDs from a vcf file
 outputs a new vcf file with a number n of samples per population, useful if there are differences in your sample size per population, samples per population are pulled randomly.
 
 # coverage_vcfilter
-this will analyse mean coverage/depth (DP) per locus. Contrary to vcftools you can choose how to handle missing depth information, genotype with missing DP can be ignored when computing the average, or if should be considered zero. Caution: vcftools seem to use both this criteria, for the table generated it ignores missing, but when filtering out loci according to coverage it seems to consider missing as zero.
+this will analyse mean coverage/depth (DP) per locus. 
+Contrary to vcftools you can choose how to handle missing depth information: genotype with missing DP can ither be ignored when computing the average or otherwise they can be considered as DP=0. Caution: vcftools seem to use both this criteria, for the table generated it ignores missing, but when filtering out loci according to coverage it seems to consider missing as zero.
 
 # vcf_joiner
 joins multiple vcf files in one file. Careful if they have different loci.
